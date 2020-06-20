@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap Css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min (6).css">
+    <title>Code Quiz</title>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-primary bg-light">
+        <a class="navbar-brand" href="highscore.html">HighScores</a>
+        <div class="ml-auto">
+            <span id="timer"></span>
+        </div>
+    </nav>
+    <!-- main section -->
+    <div class="container">
+        <div class="card">
+            <div class="card-body qa-box" id="main">
+                <!-- Questions -->
+                <div class="questions"></div>
+                <!-- Answer Choices -->
+                <div class="answerChoices"></div>
+                <div class="form"></div>
+                <div class="right-wrong"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./questions.js"></script>
+    <script src="./game.js"></script>
+    <script src="./score.js"></script>
+</body>
+
+</html>

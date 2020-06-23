@@ -48,15 +48,15 @@ function startQuiz() {
 //listen for click event
 function handleAnswerClick() {
   console.log("Event target");
-  console.log(event.target.innerText);
+  console.log(event.target.innerHTML);
 
-  if (event.target.innerText == correct[i]) {
-    console.log(correct)
-    correctAnswer +1,
+  if (event.target.innerHTML == correct[i]) {
+    console.log(correct[i]);
+    correctAnswer++;
       console.log(correctAnswer);
 
   }
-  
+  displayQuestion();
 }
 
 var i = -1;
@@ -64,14 +64,15 @@ var i = -1;
 function displayQuestion() {
   i++;
   // document.getElementById("questions") = "Q. " + myQuestions[i];
-  document.getElementById("a").innerText = "1. " + answersA[i];
-  document.getElementById("b").innerText = "2. " + answersB[i];
-  document.getElementById("c").innerText = "3. " + answersC[i];
-  document.getElementById("d").innerText = "4. " + answersD[i];
+  document.getElementById("a").innerText = answersA[i];
+  document.getElementById("b").innerText = answersB[i];
+  document.getElementById("c").innerText = answersC[i];
+  document.getElementById("d").innerText = answersD[i];
   if (i === myQuestions.length) {
     questionAnswerEl.style.display = "none";
     endSection.style.display = "block";
     // clearInterval(time);
+    handleAnswerClick();
   }
 return i;
 }
@@ -80,8 +81,7 @@ return i;
 //add event listeners
 startEl.addEventListener("click", startQuiz);
 questionAnswerEl.addEventListener("click", function(){
-  console.log("click");
-  displayQuestion();
+  handleAnswerClick();
 });
 
 // answersEl.addEventListener("click", handleAnswerClick);

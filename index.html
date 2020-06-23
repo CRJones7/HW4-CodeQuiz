@@ -9,7 +9,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap.min (6).css">
     <!-- MeCSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Code Quiz</title>
 </head>
 
@@ -18,37 +18,52 @@
     <nav class="navbar navbar-expand-lg navbar-primary bg-light">
         <a class="navbar-brand" href="highscore.html">HighScores</a>
         <div class="ml-auto">
-            <h1>Time:<span class="timeCount" id="timer">120</span></h1>
+            <h1>Time:<span id="timer">10</span></h1>
         </div>
     </nav>
     <!-- main section -->
     <div class="container">
         <div class="card mt-5">
-            <div class="card-body quiz text-center" id="main">
-                <h2 class="h2">Coding Quiz Challenge</h2>
-                <p class="p1">Try to answer the following code related questions within the time limit. Answering a
-                    question incorrectly will penalize your scoring time by 10 seconds!</p>
-                <!-- Start Quiz -->
-                <button type="button" class="btn btn-primary startBtn">Start Quiz</button>
-
-                <!-- Questions -->
-                <div class="questions">
-                    <p class="question"></p>
+            <div class="card-body text-center" id="quiz">
+                <div id="startingText">
+                    <h2 class="quiz-title">Coding Quiz Challenge</h2>
+                    <p class="instructions">Try to answer the following code related questions within the time limit.
+                        Answering a
+                        question incorrectly will penalize your scoring time by 10 seconds!</p>
+                    <!-- Start Quiz -->
+                    <button type="button" class="btn btn-primary" id="startBtn">Start Quiz</button>
                 </div>
-                <!-- Answer Choices -->
-                <div class="answerChoices">
-                    <div class="choice" id="A"></div>
-                    <div class="choice" id="B"></div>
-                    <div class="choice" id="C"></div>
+                <!-- QA Section -->
+                <div id="question-section">
+                    <!-- Questions -->
+                    <span id="questions"></span>
+                    <!-- Answer Choices -->
+                    <button class="answers" id="a"></button>
+                    <button class="answers" id="b"></button>
+                    <button class="answers" id="c"></button>
+                    <button class="answers" id="d"></button>
                 </div>
-                <div class="form"></div>
-                <div class="right-wrong"></div>
+                <div id="right-wrong">
+                    <p id="right">Correct!</p>
+                    <p id="wrong">Wrong..</p>
+                </div>
+                <div id="end-game">
+                <h4>Your score:</h4>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleFormControl"> <span id="end-score"></span> </label>
+                      <input type="text" class="form-control" id="exampleFormControl">
+                    </div>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                  </form>
+                
+            </div>
             </div>
         </div>
     </div>
-    <script src="./questions.js"></script>
+    <!-- <script src="./questions.js"></script> -->
     <script src="./game.js"></script>
-    <script src="./score.js"></script>
+    <!-- <script src="./score.js"></script> -->
 </body>
 
 </html>

@@ -1,9 +1,14 @@
-/* .h2 {
-    text-align: center;
+#question-section {
+    display: none;
 }
-.p1 {
-    text-align: center;
+
+#right {
+    display: none;
 }
-.btn {
-    align-items: center;
-} */
+
+#wrong {
+    display: none;
+}
+#end-game {
+    display: none;
+}

@@ -16,9 +16,9 @@
 <body>
     <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-primary bg-light">
-        <a class="navbar-brand" href="highscore.html">HighScores</a>
+        <a class="navbar-brand">HighScores</a>
         <div class="ml-auto">
-            <h1>Time:<span id="timer">10</span></h1>
+            <h1>Time:<span id="timer">50</span></h1>
         </div>
     </nav>
     <!-- main section -->
@@ -33,10 +33,17 @@
                     <!-- Start Quiz -->
                     <button type="button" class="btn btn-primary" id="startBtn">Start Quiz</button>
                 </div>
+                
                 <!-- QA Section -->
                 <div id="question-section">
+                    <h3>Quiz Time!</h3>
+                    <hr class="my-4">
+                    <br>
                     <!-- Questions -->
-                    <span id="questions"></span>
+                    <h4 id="questions"></h4>
+                    <br>
+                    <br>
+
                     <!-- Answer Choices -->
                     <button class="answers" id="a"></button>
                     <button class="answers" id="b"></button>
@@ -48,16 +55,21 @@
                     <p id="wrong">Wrong..</p>
                 </div>
                 <div id="end-game">
-                <h4>Your score:</h4>
-                <form>
-                    <div class="form-group">
-                      <label for="exampleFormControl"> <span id="end-score"></span> </label>
-                      <input type="text" class="form-control" id="exampleFormControl">
-                    </div>
-                    <button type="button" class="btn btn-primary">Primary</button>
-                  </form>
-                
-            </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControl">You Scored:<span id="end-score"></span></label>
+                            <input type="text" class="form-control" id="score-field" placeholder="Enter your initals and Final Score to add to the highscore board!">
+                        </div>
+                        <button type="button" class="btn btn-primary" id="save-score">Save Score</button>
+                    </form>
+
+                </div>
+                <div id="highscores">
+                    <h5>HighScores</h5>
+                    <div id="player-score"></div>
+                    <button id="go-back">Go Back</button>
+                    <button id="Clear">Clear</button>
+                </div>
             </div>
         </div>
     </div>
